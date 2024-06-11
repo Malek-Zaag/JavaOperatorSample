@@ -13,6 +13,6 @@ public class Runner {
         operator.register(new GettingStartedReconciler());
         operator.start();
         log.info("Operator started.");
-        log.warn("warning debugging mode");
+        log.warn("warning debugging mode ON");
     }
 }
