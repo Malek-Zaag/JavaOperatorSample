@@ -16,6 +16,7 @@ public class ConfigMapDependentResource
         extends CRUDKubernetesDependentResource<ConfigMap, GettingStartedCustomResource> {
 
     public static final String KEY = "key";
+    public static final String KEY2 = "key2";
 
     public ConfigMapDependentResource() {
         super(ConfigMap.class);
@@ -23,14 +24,15 @@ public class ConfigMapDependentResource
 
     @Override
     protected ConfigMap desired(GettingStartedCustomResource primary,
-                                Context<GettingStartedCustomResource> context) {
+            Context<GettingStartedCustomResource> context) {
         return new ConfigMapBuilder()
                 .withMetadata(
                         new ObjectMetaBuilder()
                                 .withName(primary.getMetadata().getName())
                                 .withNamespace(primary.getMetadata().getNamespace())
                                 .build())
-                .withData(Map.of(KEY, primary.getSpec().getValue()))
+                .withData(Map.of(KEY, primary.getSpec().getKey1()))
+                .withData(Map.of(KEY2, primary.getSpec().getKey2()))
                 .build();
     }
 }

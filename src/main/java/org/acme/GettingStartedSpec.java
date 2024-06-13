@@ -2,23 +2,23 @@ package org.acme;
 
 public class GettingStartedSpec {
 
-    private String value;
-    private String key;
+    private String key1;
+    private String key2;
 
-    public String getKey() {
-        return this.key;
+    public String getKey1() {
+        return this.key1;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setKey1(String key1) {
+        this.key1 = key1;
     }
 
-    public String getValue() {
-        return this.value;
+    public String getKey2() {
+        return this.key2;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setKey2(String key2) {
+        this.key2 = key2;
     }
 
 }
