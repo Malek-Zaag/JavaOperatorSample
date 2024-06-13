@@ -13,13 +13,8 @@ public class GettingStartedSpec {
         this.key = key;
     }
 
-    public String getValue() throws Exception {
-        try {
-            return value;
-
-        } catch (Exception e) {
-            throw new Exception("key not found");
-        }
+    public String getValue() {
+        return this.value;
     }
 
     public void setValue(String value) {

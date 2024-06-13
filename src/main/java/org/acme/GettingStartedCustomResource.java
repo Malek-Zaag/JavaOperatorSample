@@ -7,5 +7,7 @@ import io.fabric8.kubernetes.model.annotation.Version;
 
 @Group("org.acme")
 @Version("v1")
-public class GettingStartedCustomResource extends CustomResource<GettingStartedSpec,GettingStartedStatus> implements Namespaced {
+public class GettingStartedCustomResource
+        extends CustomResource<GettingStartedSpec, GettingStartedStatus>
+        implements Namespaced {
 }
