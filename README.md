@@ -33,3 +33,15 @@ public class ExposedAppReconciler implements Reconciler<ExposedApp> {
 // rest of the code here
 }
 ```
+
+## Installation
+
+```bash
+mvn io.javaoperatorsdk:bootstrapper:[version]:create -DprojectGroupId=org.acme -DprojectArtifactId=getting-started
+```
+
+## Start the Operator
+
+```bash
+mvn exec:java -Dexec.mainClass="org.acme.Runner"
+```

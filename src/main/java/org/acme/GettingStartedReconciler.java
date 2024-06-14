@@ -6,7 +6,7 @@ import io.javaoperatorsdk.operator.api.reconciler.Context;
 import io.javaoperatorsdk.operator.api.reconciler.ControllerConfiguration;
 import io.javaoperatorsdk.operator.api.reconciler.dependent.Dependent;
 
-@ControllerConfiguration(dependents = { @Dependent(type = ConfigMapDependentResource.class) })
+@ControllerConfiguration(namespaces = "default", dependents = { @Dependent(type = ConfigMapDependentResource.class) })
 public class GettingStartedReconciler implements Reconciler<GettingStartedCustomResource> {
 
     public UpdateControl<GettingStartedCustomResource> reconcile(GettingStartedCustomResource primary,

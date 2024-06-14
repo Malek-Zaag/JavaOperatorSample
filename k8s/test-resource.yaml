@@ -3,4 +3,5 @@ kind: GettingStartedCustomResource
 metadata:
   name: test1
 spec:
-  value: test
+  key1: test
+  key2: test2
