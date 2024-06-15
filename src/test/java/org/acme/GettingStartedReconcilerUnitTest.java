@@ -1,6 +1,5 @@
 package org.acme;
 
-import org.apache.logging.slf4j.Log4jLogger;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.slf4j.Logger;

@@ -10,7 +10,7 @@ import io.javaoperatorsdk.operator.processing.dependent.kubernetes.CRUDKubernete
 import io.javaoperatorsdk.operator.processing.dependent.kubernetes.KubernetesDependent;
 import org.acme.GettingStartedCustomResource;
 
-@KubernetesDependent
+@KubernetesDependent(namespaces = "default")
 public class ConfigMapDependentResource
         extends CRUDKubernetesDependentResource<ConfigMap, GettingStartedCustomResource> {
 

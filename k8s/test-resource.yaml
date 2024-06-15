@@ -2,6 +2,7 @@ apiVersion: org.acme/v1
 kind: GettingStartedCustomResource
 metadata:
   name: test1
+  namesapce: default
 spec:
   key1: test
   key2: test2
