@@ -17,10 +17,9 @@ class GettingStartedReconcilerIntegrationTest {
     public static final String CHANGED_VALUE = "changed value";
 
     @RegisterExtension
-    LocallyRunOperatorExtension extension =
-            LocallyRunOperatorExtension.builder()
-                    .withReconciler(GettingStartedReconciler.class)
-                    .build();
+    LocallyRunOperatorExtension extension = LocallyRunOperatorExtension.builder()
+            .withReconciler(GettingStartedReconciler.class)
+            .build();
 
     @Test
     void testCRUDOperations() {
@@ -32,7 +31,7 @@ class GettingStartedReconcilerIntegrationTest {
             assertThat(cm.getData()).containsEntry(KEY, INITIAL_VALUE);
         });
 
-        cr.getSpec().setValue(CHANGED_VALUE);
+        cr.getSpec().setKey1(CHANGED_VALUE);
         cr = extension.replace(cr);
 
         await().untilAsserted(() -> {
@@ -54,7 +53,7 @@ class GettingStartedReconcilerIntegrationTest {
                 .withName(RESOURCE_NAME)
                 .build());
         resource.setSpec(new GettingStartedSpec());
-        resource.getSpec().setValue(INITIAL_VALUE);
+        resource.getSpec().setKey1(INITIAL_VALUE);
         return resource;
     }
 }

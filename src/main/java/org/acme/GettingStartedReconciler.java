@@ -10,8 +10,7 @@ import io.javaoperatorsdk.operator.api.reconciler.dependent.Dependent;
 public class GettingStartedReconciler implements Reconciler<GettingStartedCustomResource> {
 
     public UpdateControl<GettingStartedCustomResource> reconcile(GettingStartedCustomResource primary,
-            Context<GettingStartedCustomResource> context) {
-
+            Context<GettingStartedCustomResource> context) throws Exception {
         return UpdateControl.noUpdate();
     }
 }

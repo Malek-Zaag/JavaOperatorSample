@@ -1,6 +1,5 @@
 package org.acme;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import io.fabric8.kubernetes.api.model.ConfigMap;
@@ -32,7 +31,6 @@ public class ConfigMapDependentResource
                                 .withNamespace(primary.getMetadata().getNamespace())
                                 .build())
                 .withData(Map.of(KEY, primary.getSpec().getKey1()))
-                .addToData(Map.of("malek", "malek"))
                 .addToData(Map.of(KEY2, primary.getSpec().getKey2()))
                 .build();
     }
