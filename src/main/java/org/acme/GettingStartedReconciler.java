@@ -11,6 +11,6 @@ public class GettingStartedReconciler implements Reconciler<GettingStartedCustom
 
     public UpdateControl<GettingStartedCustomResource> reconcile(GettingStartedCustomResource primary,
             Context<GettingStartedCustomResource> context) throws Exception {
-        return UpdateControl.noUpdate();
+        return UpdateControl.updateStatus(primary);
     }
 }
