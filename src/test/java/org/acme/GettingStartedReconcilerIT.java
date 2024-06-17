@@ -54,6 +54,7 @@ class GettingStartedReconcilerIT {
                 .build());
         resource.setSpec(new GettingStartedSpec());
         resource.getSpec().setKey1(INITIAL_VALUE);
+        resource.getSpec().setKey2(INITIAL_VALUE);
         return resource;
     }
 }
