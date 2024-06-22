@@ -18,12 +18,15 @@ bin/
 *.iml
 *.iws
 
+
 # NetBeans
 nb-configuration.xml
 
 # Visual Studio Code
 .vscode
 .factorypath
+.idea
+/home
 
 # OSX
 .DS_Store
