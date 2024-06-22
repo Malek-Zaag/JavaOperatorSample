@@ -10,6 +10,9 @@ import io.javaoperatorsdk.operator.processing.dependent.kubernetes.CRUDKubernete
 import io.javaoperatorsdk.operator.processing.dependent.kubernetes.KubernetesDependent;
 import org.acme.GettingStartedCustomResource;
 
+// Most operators need to deal with secondary resources when trying to realize the desired 
+// state described by the primary resource they are in charge of. Here comes the need for the 
+// @kubernetesDependent Operator and the class ConfigMapDependentResource
 @KubernetesDependent
 public class ConfigMapDependentResource
         extends CRUDKubernetesDependentResource<ConfigMap, GettingStartedCustomResource> {

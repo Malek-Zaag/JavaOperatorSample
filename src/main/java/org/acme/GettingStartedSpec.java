@@ -1,5 +1,6 @@
 package org.acme;
 
+// This class is used to declare the desired state
 public class GettingStartedSpec {
 
     private String key1;
