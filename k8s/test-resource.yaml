@@ -4,5 +4,5 @@ metadata:
   name: test1
   namesapce: default
 spec:
-  key1: test
-  key2: test2
+  key1: test3
+  key2: test4
