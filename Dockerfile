@@ -1,19 +1,7 @@
-FROM adoptopenjdk/openjdk11:latest
+FROM openjdk:17
 
-RUN mkdir -p build
+COPY target/ /tmp
 
-COPY ./src src
+WORKDIR /tmp
 
-USER root
-
-COPY *target/**.jar /build/target/app.jar 
-
-RUN --mount=type=bind,source=pom.xml,target=pom.xml     
-
-WORKDIR /app
-
-COPY --chown=root:root */build/target/app.jar ./app.jar
-
-EXPOSE 8080
-
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+ENTRYPOINT ["java","-jar","/tmp/getting-started-0.1.0-SNAPSHOT-jar-with-dependencies.jar"]
