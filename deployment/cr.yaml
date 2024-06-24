@@ -4,5 +4,5 @@ metadata:
   name: test1
   namespace: default
 spec:
-  key1: test3
-  key2: test4
+  key1: test5
+  key2: test6

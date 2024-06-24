@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getting-started-operator
+  namespace: getting-started-operator 
+spec:
+  selector:
+    matchLabels:
+      app: getting-started-operator
+  template:
+    metadata:
+      labels:
+        app: getting-started-operator
+    spec:
+      containers:
+      - name: getting-started-operator
+        image:  localhost:5000/hw-operator:1.0
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
+        # ports:
+        # - containerPort: 80
