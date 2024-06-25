@@ -24,7 +24,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-A simple operator that copies the values in a spec to a ConfigMap.
+Java-Operator-Sample is a Kubernetes operator written in Java that automates the management of ConfigMaps. This operator monitors Custom Resources (CR) and dynamically updates a ConfigMap with data specified in the CR. By leveraging the Kubernetes API, Java-Operator-Sample ensures that your configuration data is always in sync, simplifying the management of application configurations within your Kubernetes cluster.
 
 Moreover, several Go projects aim to make the Operator writing process easy:
 
