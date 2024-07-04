@@ -21,3 +21,7 @@ run:
 remove:
 	docker stop op
 	docker remove op
+
+clean:
+	kubectl delete -f deployment/deployment.yaml
+	kubectl delete -f deployment/rbac.yaml

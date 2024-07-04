@@ -1,0 +1,49 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: operator-role
+  namespace: default
+rules:
+- apiGroups:
+  - org.acme
+  - ""
+  - apps
+  - autoscaling
+  - batch
+  - extensions
+  - policy
+  - rbac.authorization.k8s.io
+  resources:
+  - GettingStartedCustomResource
+  - gettingstartedcustomresources
+  - configmaps
+  - "*"
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: operator-serviceaccount
+  namespace: getting-started-operator
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: operator-binding
+  namespace: default
+roleRef: # points to the Role
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: operator-role # name of Role
+subjects: # points to the ServiceAccount
+- kind: ServiceAccount
+  name: operator-serviceaccount # service account to bind to
+  namespace: getting-started-operator # ns of service account
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-long-lived-secret
+  annotations:
+    kubernetes.io/service-account.name: operator-serviceaccount
+type: kubernetes.io/service-account-token

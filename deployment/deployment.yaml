@@ -1,12 +1,20 @@
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   name: getting-started-operator
+# ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: getting-started-operator
-  namespace: getting-started-operator 
+  namespace: getting-started-operator
 spec:
   selector:
     matchLabels:
       app: getting-started-operator
+  replicas: 1 
+  strategy:
+    type: Recreate 
   template:
     metadata:
       labels:
@@ -14,10 +22,10 @@ spec:
     spec:
       containers:
       - name: getting-started-operator
-        image:  localhost:5000/hw-operator:1.0
+        image:  malek1zaag/my-operator:v0.1
         # resources:
         #   limits:
-        #     memory: "128Mi"
+        #     memory: "512Mi"
         #     cpu: "500m"
-        # ports:
-        # - containerPort: 80
+        imagePullPolicy: Always
+      serviceAccountName: operator-serviceaccount
