@@ -40,6 +40,7 @@ subjects: # points to the ServiceAccount
   name: operator-serviceaccount # service account to bind to
   namespace: getting-started-operator # ns of service account
 ---
+# secret to handle service account long-living token
 apiVersion: v1
 kind: Secret
 metadata:

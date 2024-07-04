@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://avatars.githubusercontent.com/u/38202270?s=280&v=4" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Getting Started Operator</h3>
@@ -78,13 +78,9 @@ Add notes about how to use the system.
 
 Add additional notes about how to deploy this on a live system.
 
-## ⛏️ Built Using <a name = "built_using"></a>
-
-<!--
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment -->
+```
+make deploy
+```
 
 ## ✍️ Authors <a name = "authors"></a>
 

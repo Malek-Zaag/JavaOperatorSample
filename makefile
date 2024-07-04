@@ -25,3 +25,10 @@ remove:
 clean:
 	kubectl delete -f deployment/deployment.yaml
 	kubectl delete -f deployment/rbac.yaml
+
+deploy: 
+	kubectl apply -f deployment/namespace.yaml
+	kubectl apply -f deployment/deployment.yaml
+	kubectl apply -f deployment/rbac.yaml
+	kubectl apply -f deployment/crd.yaml
+	kubectl apply -f deployment/cr.yaml
