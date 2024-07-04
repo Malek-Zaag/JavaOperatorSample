@@ -72,11 +72,11 @@ mvn verify
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+After deploy, you need only to edit the custom resources manifest.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+Just run the following command :)
 
 ```
 make deploy
