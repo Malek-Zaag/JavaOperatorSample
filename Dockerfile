@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM openjdk:24
 
 COPY target/ /tmp
 
